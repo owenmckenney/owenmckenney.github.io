@@ -9,49 +9,12 @@
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="stylesheet.css">
 
-  <!-- CAD Gallery styles (2-column grid with per-item captions) -->
-
   <style>
     h2 {
       margin-top: 20px;   /* applies to all h2 */
     }
   </style>
 
-  <style>
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:16px;               /* space between items */
-      margin-top:10px;
-    }
-    .gallery-item{
-      background:#fff;
-      border:1px solid #e5e5e5;
-      border-radius:10px;
-      padding:10px;
-    }
-    .gallery-item figure{
-      margin:0;
-    }
-    .gallery-media{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:8px;
-      /* Keep aspect ratio for videos as well */
-      object-fit:cover;
-    }
-    .gallery-item figcaption{
-      font-size:0.95rem;
-      line-height:1.4;
-      margin-top:8px;
-      color:#444;
-    }
-    /* Stack to 1 column on small screens */
-    @media (max-width: 700px){
-      .gallery-grid{ grid-template-columns:1fr; }
-    }
-  </style>
 </head>
 <body>
   <div style="max-width:900px; margin:0 auto;">
