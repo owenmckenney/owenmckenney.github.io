@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWP2BKZJXC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YWP2BKZJXC');
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Owen McKenney</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MathJax -->
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <style>
+    h2 { margin-top: 20px; }
+  </style>
+</head>
+
+<body>
+  <div style="max-width:900px; margin:0 auto;">
+    <!-- HERO (layout preserved; text still editable as Markdown) -->
+<table style="width:100%; border-spacing:0; border-collapse:separate;">
+  <tr>
+    <td style="width:63%; padding:2.5%; vertical-align:middle;">
+
+      <p class="name" style="text-align:center;">Owen McKenney</p>
+
+      <p>Hey there! I’m Owen, a 4th year undergraduate researcher at the
+<a href="https://engineering.virginia.edu/department/mechanical-and-aerospace-engineering">University of Virginia</a>,
+where I am pursuing a B.S. in Mechanical Engineering with a minor in Computer Science.
+I am originally from Charlottesville, Virginia and have spent much of my time at UVA conducting research in the bio-inspired robotics field.
+Outside of school, I spend a lot of my free time hiking and camping in the
+<a href="https://www.gettyimages.com/photos/blue-ridge-mountains-virginia?servicecontext=srp-related">Blue Ridge Mountains</a>
+and honing my cooking skills.</p>
+
+      <p style="text-align:center;">
+  <a href="mailto:hph2ax@virginia.edu">Email</a> /
+  <a href="https://www.linkedin.com/in/owenmckenney/">LinkedIn</a> /
+  <a href="https://orcid.org/0009-0003-5218-5473">ORCID</a>
+</p>
+
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;/td&gt;
+
+&lt;td style="width:37%; padding:2.5%; vertical-align:middle;"&gt;
+  &lt;a href="images/IMG_1266.png"&gt;
+    &lt;img
+      src="images/IMG_1266.png"
+      alt="profile photo"
+      style="width:70%; aspect-ratio:1/1; object-fit:cover; border-radius:50%;"
+    &gt;
+  &lt;/a&gt;
+&lt;/td&gt;
+</code></pre></div>      </div>
+      <p>&lt;/tr&gt;
+&lt;/table&gt;</p>
+
+      <h2 id="research-experience-and-interests">Research Experience and Interests</h2>
+
+      <p>I currently conduct research under the direction of
+<a href="https://engineering.virginia.edu/faculty/hilary-bart-smith">Dr. Hilary Bart-Smith</a>
+and Dr. Joseph Zhu and have been doing so since Fall 2023.
+My work here has mainly focused on developing control strategies for bio-inspired swimming platforms, including a significant amount of work with the lab’s
+<a href="https://www.science.org/doi/full/10.1126/scirobotics.aax4615">Tunabot</a>
+and <a href="https://www.mdpi.com/2226-4310/3/3/20">Mantabot</a> robotic vehicles.
+I also had the opportunity to conduct research under the direction of
+<a href="https://engineering.virginia.edu/faculty/ye-sarah-sun">Dr. Sarah Sun</a>
+during Spring 2025 where I built a simulation environment for motion planning for use in EEG-controlled robotic manipulation.
+I am very interested in the design and control of bio-inspired systems and believe that manueverable, efficient, low-cost, novel robots will eventually become commonplace for navigating adverse environments and completing tasks not suited for traditional robotics.</p>
+
+      <p><strong>I am actively searching for PhD programs for this upcoming 2025 application cycle! I am specifically interested in universities with labs working on bio-inspired and novel robotics.</strong></p>
+
+      <p><strong>My motivation:</strong> Biological systems embody millions of years of optimization, and I see immense potential in drawing from these principles to advance robotics in both fundamental and applied domains.
+I aim to advance robotic efficiency and adaptability through the co-design of bio-inspired morphology and control, treating physical design and computation as a unified system to achieve intelligent behavior.
+I seek to accomplish this by pairing rigorous theoretical modeling that captures key robot behaviors with computation driven sensing and control that allow robots to leverage their morphology for efficient, adaptive behavior.</p>
+
+      <h2 id="selected-research-projects">Selected Research Projects</h2>
+
+      <!-- Project 1 -->
+      <table style="width:100%; border:0px; border-spacing:0px 10px; border-collapse:separate; margin-right:auto; margin-left:auto;">
+  <tr>
+    <td style="padding:8px; width:35%; vertical-align:top;">
+      <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+        <!-- NOTE: ensure images/tunabot_turning.jpg exists (your original HTML referenced it) -->
+        <img src="images/tunabot_turning.jpg" style="position:absolute; top:0; left:0; width:100%; height:100%;" />
+        <video width="100%" height="100%" muted="" autoplay="" loop="" playsinline="" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          <source src="images/tunabot_turning.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </td>
+
+    <td style="padding:8px; width:65%; vertical-align:top;">
+            <h3 id="tunabot-turning-control">Tunabot Turning Control</h3>
+
+            <p>I developed a single-actuator turning and control strategy for a tuna-inspired swimming vehicle, Tunabot.
+Frequency asymmetry between the left and right half-strokes of the full path of the tailbeat cycle was introduced, leading to a turn.
+Scaling laws for tangential velocity (V), turning radius (r), and turning rate (\omega) were developed to model the behavior of the vehicle based on the base flapping frequency (f) and asymmetric frequency difference (\Delta f).</p>
+
+            <p>[
+r(f, \Delta f) = c_{2} \left(
+  \frac{
+    f_{1}^{2}(f_{1} - \Delta f) + (f_{1} - \Delta f)^{2} f_{1}
+  }{
+    f_{1}^{2}(f_{1} - \Delta f) - (f_{1} - \Delta f)^{2} f_{1}
+  }
+\right)
+]</p>
+
+            <p style="text-align:center;">
+  <a href="https://iopscience.iop.org/article/10.1088/1748-3190/adf67a">Read my publication here!</a>
+</p>
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;/td&gt;
+</code></pre></div>            </div>
+            <p>&lt;/tr&gt;
+&lt;/table&gt;</p>
+
+            <!-- Project 2 -->
+            <table style="width:100%; border:0px; border-spacing:0px 10px; border-collapse:separate; margin-right:auto; margin-left:auto;">
+  <tr>
+    <td style="padding:8px; width:35%; vertical-align:top;">
+      <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+        <img src="images/mantabot.png" alt="Mantabot" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </td>
+
+    <td style="padding:8px; width:65%; vertical-align:top;">
+                  <h3 id="mantabot-autonomous-navigation">Mantabot Autonomous Navigation</h3>
+
+                  <p>I implemented a vison and IMU based path planning strategy for a manta-inspired swimming vehicle, Mantabot.
+Paths to ArUco tags were generated using onboard cameras and tracked using pure-pursuit coupled with PID control.
+I also redesigned the circuitry and control PCB for the vehicle (see Technical Work section).</p>
+
+                  <p>[
+\delta = \arctan!\left(\frac{2L \sin(\alpha)}{l_d}\right), ~~~~ u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d \frac{de(t)}{dt}
+]</p>
+
+                  <p style="text-align:center;">
+  Work in progress.
+</p>
+                  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;/td&gt;
+</code></pre></div>                  </div>
+                  <p>&lt;/tr&gt;
+&lt;/table&gt;</p>
+
+                  <!-- Project 3 -->
+                  <table style="width:100%; border:0px; border-spacing:0px 10px; border-collapse:separate; margin-right:auto; margin-left:auto;">
+  <tr>
+    <td style="padding:8px; width:35%; vertical-align:top;">
+      <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+        <!-- NOTE: ensure images/ur5_demo.jpg exists (your original HTML referenced it) -->
+        <img src="images/ur5_demo.jpg" style="position:absolute; top:0; left:0; width:100%; height:100%;" />
+        <video width="100%" height="100%" muted="" autoplay="" loop="" playsinline="" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          <source src="images/ur5_demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </td>
+
+    <td style="padding:8px; width:65%; vertical-align:top;">
+                        <h3 id="robotic-manipulation-simulation-environment">Robotic Manipulation Simulation Environment</h3>
+
+                        <p>I created a simulation environment for a Universal Robotics’ UR5 using Python coupled with ROS2 and MoveIt for control and motion planning.
+A camera was used to capture the actual workspace and mirror objects into the simulation, enabling accurate pick-and-place.
+Software will be used to carry out electroencephalogram (EEG) robotic manipulation testing with human participants.</p>
+
+                        <p>[
+\begin{bmatrix}
+x_c <br />
+y_c <br />
+z_c
+\end{bmatrix}
+=
+\begin{bmatrix}
+r_{11} &amp; r_{12} &amp; r_{13} &amp; t_x <br />
+r_{21} &amp; r_{22} &amp; r_{23} &amp; t_y <br />
+r_{31} &amp; r_{32} &amp; r_{33} &amp; t_z
+\end{bmatrix}
+\begin{bmatrix}
+x_w <br />
+y_w <br />
+z_w <br />
+1
+\end{bmatrix}
+]</p>
+
+                        <p style="text-align:center;">
+  Work in progress.
+  <a href="files/ur5_sim.pdf" download="ur5_sim.pdf">See a documentation file of the work I did here.</a>
+</p>
+                        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;/td&gt;
+</code></pre></div>                        </div>
+                        <p>&lt;/tr&gt;
+&lt;/table&gt;</p>
+
+                        <h2 id="publications">Publications</h2>
+
+                        <ol>
+                          <li><strong>McKenney, O.</strong>, Zhu, J., Han, T., Bart-Smith, H. (2025). Development of a turning control strategy for a bio-inspired underwater vehicle. <strong>Bioinspiration &amp; Biomimetics,</strong> 20(5), 056004.</li>
+                        </ol>
+
+                        <h2 id="conferences--presentations">Conferences &amp; Presentations</h2>
+
+                        <ol>
+                          <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2025). Bending Underwater: Turning and control of a tethered, tuna-inspired underwater vehicle. Oral presentation at SICB 2025 Annual Conference</li>
+                          <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2024). Stability and maneuverability control in Tunabot platform with quantitative analysis of swimming dynamics. Oral presentation at ONR MURI review attended by collaborators from Lehigh, Harvard, and Princeton University</li>
+                        </ol>
+
+                        <h2 id="teaching">Teaching</h2>
+
+                        <ul>
+                          <li>Teaching Assistant, <strong>MAE 4501 Special Topics: Robotic Manipulators</strong>, Fall 2025</li>
+                        </ul>
+
+                        <h2 id="selected-technical-work">Selected Technical Work</h2>
+
+                        <p><a href="/files/Owen-McKenney-Technical-Portfolio.pdf">Download a portfolio of selected technical work here.</a></p>
+
+                        <h2 id="personal-computational-projects">Personal Computational Projects</h2>
+
+                        <h3 id="double-pendulum-simulation">Double Pendulum Simulation</h3>
+
+                        <p><a href="https://iopscience.iop.org/article/10.1088/1748-3190/adf67a">Read more about my derivations and computation here</a></p>
+
+                        <footer>
+  <p style="text-align:right; font-size:small;">
+    This website is built based on the template from
+    <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>
+    with further formatting used from
+    <a href="https://github.com/tianjunhan/tianjunhan.github.io">Tianjun Han</a>.
+  </p>
+</footer>
+                      </td></tr></table>
+                </td></tr></table>
+          </td></tr></table>
+    </td></tr></table>
+
+  </div>
+</body>
+</html>
