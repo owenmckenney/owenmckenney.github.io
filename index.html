@@ -37,17 +37,16 @@
   </script>
 
   <style>
-    /* ============================================================
-       LAYOUT VARIABLES (EDIT THESE TWO VALUES ONLY)
-       ============================================================ */
     :root{
       --media-col: 300px; /* <-- VARIABLE #1: width of the media (image/video) column */
       --media-gap: 24px;  /* <-- VARIABLE #2: fixed gap (px) between media and text */
       --maxw: 900px;
     }
-    /* ============================================================ */
 
-    h2 { margin-top: 40px; }
+    h2 { 
+      margin-top: 30px; 
+      /* font-weight: 700; */
+    }
     body { margin:0; padding:0; }
     .container { max-width: var(--maxw); margin:0 auto; padding:0 16px; }
 
@@ -70,94 +69,55 @@
       display:block;
     }
 
-    /* ============================================================
-       ONE SINGLE PROJECT SYSTEM USED EVERYWHERE
-       (Research projects AND Computational projects use this)
-       ============================================================ */
-    .project-list{
-      display:flex;
-      flex-direction:column;
-      gap: 14px;
-      margin-top: 10px;
-    }
-    .project-row{
-      display:grid;
-      grid-template-columns: var(--media-col) 1fr; /* <-- uses --media-col */
-      column-gap: var(--media-gap);               /* <-- uses --media-gap */
-      align-items:start;
-    }
-    .project-media{ width: var(--media-col); }    /* <-- uses --media-col */
-    .project-body{ min-width:0; }
-    /* ============================================================ */
-
-    /* Media box: consistent for all images/videos */
-    .media-box{
-      width: 100%;
-      position: relative;
-      overflow: visible;   /* or hidden if you prefer cropping */
-      background: transparent;
-      border-radius: 2px;
-    }
-
-    /* Make media scale to width, keep natural aspect ratio */
-    .media-box img,
-    .media-box video{
-      position: static;     /* <-- remove absolute positioning */
-      width: 100%;
-      height: auto;         /* <-- key: height follows intrinsic ratio */
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Optional: video fill width while preserving its own aspect ratio */
-    .media-box video{
-      object-fit: contain;
-    }
-
-    /* Simple lists */
-    .simple-list { margin: 0; padding-left: 1.25em; }
-    .simple-list li { margin: 6px 0; }
-
-    /* Responsive: stacks media above text */
-    @media (max-width: 720px){
-      :root{ --media-col: 100%; }                 /* media becomes full width on mobile */
-      .project-row{ grid-template-columns: 1fr; row-gap: 12px; }
-      .project-media{ width: 100%; }
-      .top{ flex-direction:column-reverse; align-items:stretch; }
-      .top-right{ justify-content:flex-start; }
-    }
-
-
-
 
     .project {
       display: flex;
-      gap: 16px;              /* fixed space between image + text */
+      gap: 16px;
       align-items: flex-start;
-      margin: 20px 0;         /* space between projects */
+      margin: 20px 0;
     }
     .project-media {
-      flex: 0 0 300px;        /* fixed image column width */
+      flex: 0 0 300px;   /* fixed media column width */
+    }
+    .project-media video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px; /* optional */
     }
     .project-media img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px;     /* optional, delete if you want ultra-minimal */
+      border-radius: 4px; /* optional */
     }
     .project-body {
       flex: 1;
-      min-width: 0;           /* prevents overflow in flex layouts */
+      min-width: 0;
     }
-    .project-title {
-      font-weight: 700;
-      text-decoration: none;
-    }
+
     .project-meta {
       margin: 6px 0 10px;
     }
+    .project-body{
+      flex: 1;
+      min-width: 0;
+      padding-top: 0px;   /* space above the text section */
+    }
+    .project-desc{
+      margin-top: 12px;
+    }
 
+    .project-title{
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;  
+      line-height: 1.2;
+    }
+
+    .project-authors { margin-bottom: 4px; } /* tweak 4px -> 8px etc */
+    
+    .project-desc .katex { font-size: 1em; line-height: 1; }
 
   </style>
 
@@ -180,6 +140,7 @@
         <p style="text-align:center;">
           <a href="mailto:hph2ax@virginia.edu">Email</a> /
           <a href="https://www.linkedin.com/in/owenmckenney/">LinkedIn</a> /
+          <a href="https://scholar.google.com/citations?user=JeKA1ZgAAAAJ&hl=en&oi=ao">Google Scholar</a> /
           <a href="https://orcid.org/0009-0003-5218-5473">OCRID</a>
         </p>
       </div>
@@ -197,11 +158,10 @@
         I currently conduct research under the direction of <a href="https://engineering.virginia.edu/faculty/hilary-bart-smith">Dr. Hilary Bart-Smith</a> and Dr. Joseph Zhu and have been doing so since Fall 2023. 
         My work here has mainly focused on developing control strategies for bio-inspired swimming platforms, including a significant amount of work with the lab's <a href="https://www.science.org/doi/full/10.1126/scirobotics.aax4615">Tunabot</a> and <a href="https://www.mdpi.com/2226-4310/3/3/20">Mantabot</a> robotic vehicles. 
         I also had the opportunity to conduct research under the direction of <a href="https://engineering.virginia.edu/faculty/ye-sarah-sun">Dr. Sarah Sun</a> during Spring 2025 where I built a simulation environment for motion planning for use in EEG-controlled robotic manipulation. 
-        I am very interested in the design and control of bio-inspired systems and believe that manueverable, efficient, low-cost, novel robots will eventually become commonplace for navigating adverse environments and completing tasks not suited for traditional robotics. 
       </p>
 
       <p style="text-align: justify;">
-        <strong>I am actively searching for PhD programs for this upcoming 2025 application cycle! I am specifically interested in universities with labs working on bio-inspired and novel robotics.</strong> 
+        <strong>I am actively searching for PhD programs for Fall 2026! I am specifically interested in labs working on biomimetic approaches in robotics for applications in locomotion and manipulation.</strong> 
       </p>
 
       <p style="text-align: justify;">
@@ -210,78 +170,82 @@
         I seek to accomplish this by pairing rigorous theoretical modeling that captures key robot behaviors with computation driven sensing and control that allow robots to leverage their morphology for efficient, adaptive behavior.
       </p>
 
-      <h2>Selected Research Projects</h2>
+      <h2>Publications</h2>
 
-      <!-- Research projects use the unified project system -->
-      <div class="project-list">
-
-        <div class="project-row">
+        <div class="project">
           <div class="project-media">
-            <div class="media-box">
-              <!-- <img src="images/tunabot_turning.jpg" alt="Tunabot turning"> -->
-              <video muted autoplay loop playsinline>
-                <source src="images/tunabot_turning.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="images/tunabot_turning.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
+
           <div class="project-body">
-            <h3 style="margin-top:0;">Tunabot Turning Control</h3>
-            <p style="text-align: justify;">
+            <a class="project-title" href="https://iopscience.iop.org/article/10.1088/1748-3190/adf67a">Development of a turning control strategy for a bio-inspired underwater vehicle.</a>
+
+            <div class="project-meta">
+              <div class="project-authors">
+                <strong>Owen McKenney</strong>, Joseph Zhu, Tianjun Han, Hilary Bart-Smith
+              </div>
+              <div class="project-pub">
+                <em>Bioinspiration & Biomimetics</em>, 2025,
+                <a href="https://iopscience.iop.org/article/10.1088/1748-3190/adf67a">10.1088/1748-3190/adf67a</a>
+              </div>
+            </div>
+
+            <p class="project-desc">
               I developed a single-actuator turning and control strategy for a tuna-inspired swimming vehicle, Tunabot. 
               Frequency asymmetry between the left and right half-strokes of the full path of the tailbeat cycle was introduced, leading to a turn. 
-              Scaling laws for tangential velocity \(V\), turning radius \(r\), and turning rate \(\omega\) were developed to model the behavior of the vehicle based on the base flapping frequency \(f\) and asymmetric frequency difference \(\Delta f\).
-            </p> 
-            <p>
-              $$ r(f,\Delta f)=c_2\left(\frac{f_1^2(f_1-\Delta f)+(f_1-\Delta f)^2f_1}{f_1^2(f_1-\Delta f)-(f_1-\Delta f)^2f_1}\right) $$
+              Scaling laws for tangential velocity $V$, turning radius $r$, and turning rate $\omega$ were developed to model the behavior of the vehicle based on the base flapping frequency $f$ and asymmetric frequency difference $\Delta f$.<br>
             </p>
-            <p style="text-align:center;">
-              <a href="https://iopscience.iop.org/article/10.1088/1748-3190/adf67a">Read my publication here!</a>
-            </p>
+            
+            $$
+            r = c_{2}\,\phi_{2}, \qquad
+            \phi_{2} = \frac{f\,(f-\Delta f) + (f-\Delta f)^{2}}{f\,(f-\Delta f) - (f-\Delta f)^{2}}
+            $$
+  
           </div>
         </div>
+    </section>
 
-        <div class="project-row">
-          <div class="project-media">
-            <div class="media-box">
-              <img src="images/mantabot.png" alt="Mantabot">
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 style="margin-top:0;">Mantabot Autonomous Navigation</h3>
-            <p style="text-align: justify;">
-              I implemented a vison and IMU based path planning strategy for a manta-inspired swimming vehicle, Mantabot. 
-              Paths to ArUco tags were generated using onboard cameras and tracked using pure-pursuit coupled with PID control. 
-              I also redesigned the circuitry and control PCB for the vehicle (see Technical Work section).
-            </p>
-            $$
-            \delta = \arctan\!\left(\frac{2L \sin(\alpha)}{l_d}\right), \qquad
-            u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d \frac{de(t)}{dt}
-            $$
-            <p style="text-align:center;">
-              Work in progress.
-            </p>
-          </div>
-        </div>
+    <section>
+      <h2>Conferences & Presentations</h2>
+      <ol class="simple-list">
+        <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2025). Bending Underwater: Turning and control of a tethered, tuna-inspired underwater vehicle. Oral presentation at SICB 2025 Annual Conference</li>
+        <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2024). Stability and maneuverability control in Tunabot platform with quantitative analysis of swimming dynamics. Oral presentation at ONR MURI review attended by collaborators from Lehigh, Harvard, and Princeton University</li>
+      </ol>
+    </section>
 
-        <div class="project-row">
+    <section>
+      <h2>Teaching & Mentorship</h2>
+      <ul class="simple-list" style="list-style:none; padding-left:0;">
+        <li>Teaching Assistant, <strong>MAE 4501 Special Topics: Robotic Manipulators</strong>, Fall 2025</li>
+        <li>Mentor, <strong>Rodman Scholars Mentorship Program</strong>, Fall 2024 - Present</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Selected Research Projects</h2>
+
+        <div class="project">
           <div class="project-media">
-            <div class="media-box">
-              <!-- <img src="ur5_demo.jpg" alt="UR5 demo"> -->
-              <video muted autoplay loop playsinline>
-                <source src="images/ur5_demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="images/ur5_demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
+
           <div class="project-body">
-            <h3 style="margin-top:0;">Robotic Manipulation Simulation Environment</h3>
-            <p style="text-align: justify;">
+            <!-- <a href="files/ur5_sim.pdf" download="ur5_sim.pdf">See a documentation file of the work I did here.</a> -->
+            <a class="project-title" href="files/ur5_sim.pdf" download="ur5_sim.pdf">Virtual Environment for UR5 Manipulator</a>
+
+            <div class="project-desc">
               I created a simulation environment for a Universal Robotics' UR5 using Python coupled with ROS2 and MoveIt for control and motion planning. 
               A camera was used to capture the actual workspace and mirror objects into the simulation, enabling accurate pick-and-place. 
-              Software will be used to carry out electroencephalogram (EEG) robotic manipulation testing with human participants.
-            </p>
-            $$
+              Software will be used to carry out electroencephalogram (EEG) robotic manipulation testing with human participants. <strong>Work in progress.</strong>
+            </div>
+            
+               $$
               \begin{bmatrix}
               x_c \\
               y_c \\
@@ -300,62 +264,71 @@
               1
               \end{bmatrix}
             $$
-            <p style="text-align:center;">
-              Work in progress. <a href="files/ur5_sim.pdf" download="ur5_sim.pdf">See a documentation file of the work I did here.</a>
-            </p>
           </div>
         </div>
-      </div>
 
-      <h2>Publications</h2>
-      <ol class="simple-list">
-        <li><strong>McKenney, O.</strong>, Zhu, J., Han, T., Bart-Smith, H. (2025). Development of a turning control strategy for a bio-inspired underwater vehicle. <strong>Bioinspiration & Biomimetics,</strong> 20(5), 056004.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Conferences & Presentations</h2>
-      <ol class="simple-list">
-        <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2025). Bending Underwater: Turning and control of a tethered, tuna-inspired underwater vehicle. Oral presentation at SICB 2025 Annual Conference</li>
-        <li><strong>McKenney, O.</strong>, Zhu, J, Bart-Smith, H. (2024). Stability and maneuverability control in Tunabot platform with quantitative analysis of swimming dynamics. Oral presentation at ONR MURI review attended by collaborators from Lehigh, Harvard, and Princeton University</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Teaching</h2>
-      <ul class="simple-list" style="list-style:none; padding-left:0;">
-        <li>Teaching Assistant, <strong>MAE 4501 Special Topics: Robotic Manipulators</strong>, Fall 2025</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Selected Technical Work</h2>
-      <p>
-        <a href="files/Owen-McKenney-Technical-Portfolio.pdf" download="Owen-McKenney-Technical-Portfolio.pdf">Download a portfolio of selected technical work here.</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Personal Computational Projects</h2>
-
-      <!-- Computational projects use the EXACT SAME unified project system -->
-      <div class="project-list">
-
-        <div class="project-row">
+        <div class="project">
           <div class="project-media">
-            <div class="media-box">
-              <video id="dpVideo" muted autoplay loop playsinline>
-                <source src="images/dp_sim.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+            <img src="images/mantabot.png" alt="Mantabot preview">
+          </div>
+          
+          <div class="project-body">
+            <a class="project-title">Autonomous navigation for a manta-ray inspired robot (Mantabot)</a>
+
+            <div class="project-desc">
+              I implemented a vison and IMU based path planning strategy for a manta-inspired swimming vehicle, Mantabot. 
+              Paths to ArUco tags were generated using onboard cameras and tracked using pure-pursuit coupled with PID control. 
+              I also redesigned the circuitry and control PCB for the vehicle (see Technical Work section). <strong>Work in progress.</strong>
             </div>
+            
+            $$
+            \delta = \arctan\!\left(\frac{2L \sin(\alpha)}{l_d}\right), \qquad
+            u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d \frac{de(t)}{dt}
+            $$
+
+          </div>
+        </div>
+      
+        <div class="project">
+          <div class="project-media">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="images/bire2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div class="project-body">
-            <h3 style="margin-top:0;">Double Pendulum Simulation</h3>
-            <p style="text-align: justify;">
-              I derived differential equations for the motion of a double pendulum and implemeted them into Python, using a 4th-order Runge-Kutta solver to solve for angular positions.
-            </p>
+            <a class="project-title" href="https://www.biretechnologies.com/">Bio-inspired riverine hydrokinetic energy generatator demonstration</a>
+
+            <div class="project-desc">
+              I designed and fabricated a demonstration system for a riverine hydrokinetic energy generator that exploited unsteady lift-based hydrodynamics of pitching hydrofoils to harvest energy. 
+              I developed a scaled model, designed components and printed circuit boards, and wrote C++ code to mimic sinusoidal hydrofoil behavior.
+              My demonstration system was <strong>presented at the ARPA-E Innovation Summit 2024.</strong>
+            </div>
+            
+
+          </div>
+        </div>
+
+    </section>
+
+    <section>
+      <h2>Other Projects</h2>
+
+      <div class="project">
+        <div class="project-media">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="images/dp_sim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="project-body">
+          <a class="project-title" href="https://github.com/owenmckenney/Double-Pendulum-Simulation">Double Pendulum Simulation</a>
+
+          <div class="project-desc">
+            I derived the equations of motion for a double pendulum and implemented them in Python, using a 4th-order Runge-Kutta integrator to simulate the system's angular dynamics over time.          
+          </div>
 
             \[
               y(t)=
@@ -375,14 +348,61 @@
             \[
               \dot{\omega}_2=f_2(\theta_1,\theta_2,\omega_1,\omega_2)\;-\;c_2\,\omega_2
             \]
+              
+        </div>
+      </div>
 
-            <p style="text-align:center;">
-              See my derivations here.
-            </p>
-          </div>
+      <div class="project">
+        <div class="project-media">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="images/rmfp_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
+        <div class="project-body">
+          <a class="project-title" href="https://github.com/owenmckenney/Vision_Based_UR5_Interaction">Vision-Based UR5 Human-Robot Interaction</a>
+
+          <div class="project-desc">
+            I used a webcam and a Universal Robots' UR5 manipulator to allow for the end effector to deliver a cube to a dynamically moving human hand.
+            I used PID controllers to guide the end effector to the human hand, scaling speed as target became closer. 
+          </div>
+
+          $$ u_x(t) = K_{p,x}\,e_x(t) + K_{i,x}\int_{0}^{t} e_x(\tau)\, d\tau + K_{d,x}\frac{d e_x(t)}{dt} $$
+          $$ u_y(t) = K_{p,y}\,e_y(t) + K_{i,y}\int_{0}^{t} e_y(\tau)\, d\tau + K_{d,y}\frac{d e_y(t)}{dt} $$
+
+        </div>
       </div>
+
+      <div class="project">
+        <div class="project-media">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="images/ra_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="project-body">
+          <a class="project-title" href="https://github.com/owenmckenney/Robotic_Actuator">3D Printed Planetary Robotic Actuator</a>
+          <div class="project-desc">
+            I designed a custom actuator for bipedal and quadrupedal robotics. The actuator used a planetary gearbox to achieve 8:1 reduction and is fully backdriveable. 
+            The design uses <a href="">mjbots</a> motors, drivers, and magnetic encoders for control. 
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Selected Technical Work</h2>
+
+      <p>
+        The following portfolio contains some of my technical work including custom circuit boards, CAD for robotic actuators, and camera-based interaction with a UR5 manipulator.  
+      </p>
+      <p>
+        <a href="files/Owen-McKenney-Technical-Portfolio.pdf" download="Owen-McKenney-Technical-Portfolio.pdf">Download a portfolio of selected technical work here.</a>
+      </p>
     </section>
 
     <footer>
@@ -391,28 +411,6 @@
         <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a> with further formatting used from <a href="https://github.com/tianjunhan/tianjunhan.github.io">Tianjun Han</a>.
       </p>
     </footer>
-
-    
-    <!-- <div class="project">
-      <div class="project-media">
-        <img src="images/my_project.jpg" alt="My project thumbnail">
-      </div>
-
-      <div class="project-body">
-        <a class="project-title" href="PROJECT_LINK">Project Title</a>
-
-        <div class="project-meta">
-          Author One, Author Two<br>
-          <em>Venue</em>, 2025 ·
-          <a href="PROJECT_PAGE">project</a> ·
-          <a href="PDF_LINK">pdf</a>
-        </div>
-
-        <div>
-          One or two sentences describing the project. Keep it short and consistent.
-        </div>
-      </div>
-    </div> -->
 
   </div>
 </body>
