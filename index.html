@@ -83,13 +83,13 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 4px; /* optional */
+      border-radius: 3px; /* optional */
     }
     .project-media img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 4px; /* optional */
+      border-radius: 2px; /* optional */
     }
     .project-body {
       flex: 1;
@@ -105,7 +105,7 @@
       padding-top: 0px;   /* space above the text section */
     }
     .project-desc{
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .project-title{
@@ -118,6 +118,22 @@
     .project-authors { margin-bottom: 4px; } /* tweak 4px -> 8px etc */
     
     .project-desc .katex { font-size: 1em; line-height: 1; }
+
+
+    .project-math{
+      text-align: center;      /* centers the caption */
+      margin-top: 10px;
+    }
+
+    .project-math .katex-display{
+      margin: 0;               /* optional: tighten KaTeX default vertical space */
+    }
+
+    .eq-caption{
+      font-size: 0.75rem;      /* smaller text */
+      color: #000000;
+      margin-top: 6px;         /* space below equation */
+    }
 
   </style>
 
@@ -134,7 +150,7 @@
         <p style="text-align: justify;">
           Hey there! I'm Owen, a 4th year undergraduate researcher at the 
           <a href="https://engineering.virginia.edu/department/mechanical-and-aerospace-engineering">University of Virginia</a>,
-          where I am pursuing a B.S. in Mechanical Engineering with a minor in Computer Science. 
+          where I am pursuing a B.S. in Mechanical Engineering with a minor in Computer Science, with an expected graduation data in May 2026.
           I am originally from Charlottesville, Virginia and have spent much of my time at UVA conducting research in the bio-inspired robotics field. 
           Outside of school, I spend a lot of my free time hiking and camping in the <a href="https://www.gettyimages.com/photos/blue-ridge-mountains-virginia?servicecontext=srp-related">Blue Ridge Mountains</a> and honing my cooking skills.
         </p>
@@ -162,7 +178,7 @@
       </p>
 
       <p style="text-align: justify;">
-        <strong>I am actively searching for PhD programs for Fall 2026! I am specifically interested in labs working on biomimetic approaches in robotics for applications in locomotion and manipulation.</strong> 
+        <strong>I am actively searching for PhD programs for Fall 2026! I am particularly interested in labs working on biomimetic approaches in robotics for applications in locomotion and manipulation.</strong> 
       </p>
 
       <p style="text-align: justify;">
@@ -176,7 +192,7 @@
         <div class="project">
           <div class="project-media">
             <video autoplay muted loop playsinline preload="metadata">
-              <source src="images/tunabot_turning.mp4" type="video/mp4">
+              <source src="images/tunabot.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -231,7 +247,7 @@
         <div class="project">
           <div class="project-media">
             <video autoplay muted loop playsinline preload="metadata">
-              <source src="images/ur5_demo.mp4" type="video/mp4">
+              <source src="images/ur5.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -243,10 +259,12 @@
             <div class="project-desc">
               I created a simulation environment for a Universal Robotics' UR5 using Python coupled with ROS2 and MoveIt for control and motion planning. 
               A camera was used to capture the actual workspace and mirror objects into the simulation, enabling accurate pick-and-place. 
+              Objects in this demo (blue cubes) represent actual cubes in the workspace and change dynamically as real objects are moved.
               Software will be used to carry out electroencephalogram (EEG) robotic manipulation testing with human participants. <strong>Work in progress.</strong>
             </div>
             
-               $$
+            <div class="project-math">
+              $$
               \begin{bmatrix}
               x_c \\
               y_c \\
@@ -264,7 +282,12 @@
               z_w \\
               1
               \end{bmatrix}
-            $$
+              $$
+              <div class="eq-caption">
+                Homogeneous transformation for linking camera and robot frame
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -281,11 +304,17 @@
               Paths to ArUco tags were generated using onboard cameras and tracked using pure-pursuit coupled with PID control. 
               I also redesigned the circuitry and control PCB for the vehicle (see Technical Work section). <strong>Work in progress.</strong>
             </div>
-            
-            $$
-            \delta = \arctan\!\left(\frac{2L \sin(\alpha)}{l_d}\right), \qquad
-            u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d \frac{de(t)}{dt}
-            $$
+        
+
+            <div class="project-math">
+              $$
+              \delta = \arctan\!\left(\frac{2L \sin(\alpha)}{l_d}\right), \qquad
+              u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d \frac{de(t)}{dt}
+              $$
+              <div class="eq-caption">
+                Pure-Pursuit heading calculation (left) and PID (right)
+              </div>
+            </div>
 
           </div>
         </div>
@@ -317,9 +346,36 @@
       <h2>Other Projects</h2>
 
       <div class="project">
+        <div class="project-media"> 
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="images/ip_nmpc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="project-body">
+          <a class="project-title" href="">Inverted Pendulum Swing-Up using Nonlinear Model Predictive Control</a>
+
+          <div class="project-meta">
+            <div class="project-authors">
+              Github Repository: <a href="https://github.com/owenmckenney/computational-projects">https://github.com/owenmckenney/computational-projects</a>
+            </div>
+          </div>
+
+          <div class="project-desc">
+            I implemented a nonlinear model predictive controller (NMPC) to balance an idealized inverted pendulum.
+            The controller respects cart travel and actuator limits while planning control actions to swing the pendulum up and stabilize it in an upright position.  
+          </div>
+
+          <p style="text-align: center;"><strong>In-depth project write-up coming soon</strong></p>
+
+        </div>
+      </div>
+
+      <div class="project">
         <div class="project-media">
           <video autoplay muted loop playsinline preload="metadata">
-            <source src="images/dp_sim.mp4" type="video/mp4">
+            <source src="images/dp.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -327,29 +383,32 @@
         <div class="project-body">
           <a class="project-title" href="https://github.com/owenmckenney/Double-Pendulum-Simulation">Double Pendulum Simulation</a>
 
+          <div class="project-meta">
+            <div class="project-authors">
+              Github Repository: <a href="https://github.com/owenmckenney/computational-projects">https://github.com/owenmckenney/computational-projects</a>
+            </div>
+          </div>
+
           <div class="project-desc">
             I derived the equations of motion for a double pendulum and implemented them in Python, using a 4th-order Runge-Kutta integrator to simulate the system's angular dynamics over time.          
           </div>
 
+          <div class="project-math">
             \[
-              y(t)=
-              \begin{bmatrix}
-              \theta_1(t)\\
-              \theta_2(t)\\
-              \omega_1(t)\\
-              \omega_2(t)
-              \end{bmatrix},
-              \qquad
-              \dot{\theta}_1=\omega_1,\;\;\dot{\theta}_2=\omega_2
+            \begin{aligned}
+            \ddot{\theta}_1 &= f_1(\theta_1,\theta_2,\dot{\theta}_1,\dot{\theta}_2)\;-\;c_1\,\dot{\theta}_1 \\
+            \ddot{\theta}_2 &= f_2(\theta_1,\theta_2,\dot{\theta}_1,\dot{\theta}_2)\;-\;c_2\,\dot{\theta}_2
+            \end{aligned}
             \]
 
             \[
-              \dot{\omega}_1=f_1(\theta_1,\theta_2,\omega_1,\omega_2)\;-\;c_1\,\omega_1
+            y_{n+1}=y_n+\frac{\Delta t}{6}\bigl(k_1+2k_2+2k_3+k_4\bigr)
             \]
-            \[
-              \dot{\omega}_2=f_2(\theta_1,\theta_2,\omega_1,\omega_2)\;-\;c_2\,\omega_2
-            \]
-              
+            <div class="eq-caption">
+              Simplified equation for joint 1 (top) and joint 2 (middle), and 4th-order Runge-Kutta (bottom)
+            </div>
+          </div>
+                        
         </div>
       </div>
 
@@ -364,13 +423,25 @@
         <div class="project-body">
           <a class="project-title" href="https://github.com/owenmckenney/Vision_Based_UR5_Interaction">Vision-Based UR5 Human-Robot Interaction</a>
 
+          <div class="project-meta">
+            <div class="project-authors">
+              Github Repository: <a href="https://github.com/owenmckenney/Vision_Based_UR5_Interaction">https://github.com/owenmckenney/Vision_Based_UR5_Interaction</a>
+            </div>
+          </div>
+
           <div class="project-desc">
             I used a webcam and a Universal Robots' UR5 manipulator to allow for the end effector to deliver a cube to a dynamically moving human hand.
             I used PID controllers to guide the end effector to the human hand, scaling speed as target became closer. 
           </div>
 
-          $$ u_x(t) = K_{p,x}\,e_x(t) + K_{i,x}\int_{0}^{t} e_x(\tau)\, d\tau + K_{d,x}\frac{d e_x(t)}{dt} $$
-          $$ u_y(t) = K_{p,y}\,e_y(t) + K_{i,y}\int_{0}^{t} e_y(\tau)\, d\tau + K_{d,y}\frac{d e_y(t)}{dt} $$
+          <div class="project-math">
+            $$ u_x(t) = K_{p,x}\,e_x(t) + K_{i,x}\int_{0}^{t} e_x(\tau)\, d\tau + K_{d,x}\frac{d e_x(t)}{dt} $$
+            $$ u_y(t) = K_{p,y}\,e_y(t) + K_{i,y}\int_{0}^{t} e_y(\tau)\, d\tau + K_{d,y}\frac{d e_y(t)}{dt} $$
+
+            <div class="eq-caption">
+              PID controllers for x and y directions
+            </div>
+          </div>
 
         </div>
       </div>
@@ -385,6 +456,13 @@
 
         <div class="project-body">
           <a class="project-title" href="https://github.com/owenmckenney/Robotic_Actuator">3D Printed Planetary Robotic Actuator</a>
+
+          <div class="project-meta">
+            <div class="project-authors">
+              Github Repository: <a href="https://github.com/owenmckenney/Robotic_Actuator">https://github.com/owenmckenney/Robotic_Actuator</a>
+            </div>
+          </div>
+
           <div class="project-desc">
             I designed a custom actuator for bipedal and quadrupedal robotics. The actuator used a planetary gearbox to achieve 8:1 reduction and is fully backdriveable. 
             The design uses <a href="https://mjbots.com/">mjbots</a> motors, drivers, and magnetic encoders for control. 
