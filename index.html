@@ -187,6 +187,11 @@
         I seek to accomplish this by pairing rigorous theoretical modeling that captures key robot behaviors with computation driven sensing and control that allow robots to leverage their morphology for efficient, adaptive behavior.
       </p>
 
+      <p>
+        Feel free to read more about some of my outputs for research and other projects below!
+        When applicable, I've included an equation or two that either resulted from the project or were critical for developing the projec; after all, mathematics is the foundation of engineering. 
+      </p>
+
       <h2>Publications</h2>
 
         <div class="project">
@@ -235,7 +240,7 @@
 
     <section>
       <h2>Teaching & Mentorship</h2>
-      <ul class="simple-list" style="list-style:none; padding-left:0;">
+      <ul class="simple-list">
         <li>Teaching Assistant, <strong>MAE 4501 Special Topics: Robotic Manipulators</strong>, Fall 2025</li>
         <li>Mentor, <strong>Rodman Scholars Mentorship Program</strong>, Fall 2024 - Present</li>
       </ul>
@@ -253,7 +258,6 @@
           </div>
 
           <div class="project-body">
-            <!-- <a href="files/ur5_sim.pdf" download="ur5_sim.pdf">See a documentation file of the work I did here.</a> -->
             <a class="project-title" href="files/ur5_sim.pdf" download="ur5_sim.pdf">Virtual Environment for UR5 Manipulator</a>
 
             <div class="project-desc">
@@ -331,12 +335,12 @@
             <a class="project-title" href="https://arpa-e.energy.gov/programs-and-initiatives/search-all-projects/bio-inspired-renewable-energy-bire-highly-efficient-low-cost-riverine-hydrokinetics">Bio-inspired riverine hydrokinetic energy generatator demonstration</a>
 
             <div class="project-desc">
-              I designed and fabricated a demonstration system for a riverine hydrokinetic energy generator that exploited unsteady lift-based hydrodynamics of pitching hydrofoils to harvest energy. 
-              I developed a scaled model, designed components and printed circuit boards, and wrote C++ code to mimic sinusoidal hydrofoil behavior.
-              My demonstration system was <strong>presented at the ARPA-E Innovation Summit 2024.</strong>
+              I designed and fabricated a demonstration system for a riverine hydrokinetic energy generator that exploits the unsteady lift-based hydrodynamics of pitching hydrofoils to harvest energy. 
+              I built a scaled system, designing custom SolidWorks components, a control circuit board in Altium, and wrote embedded C++ to drive the actuators. 
+              Using closed-loop control, I synchronized linear actuators and servos to produce sinusoidal hydrofoil motion with tunable frequency and amplitude. 
+              <strong>I assisted in the presentation of this system at the ARPA-E Innovation Summit 2024.</strong>
             </div>
             
-
           </div>
         </div>
 
@@ -365,9 +369,17 @@
           <div class="project-desc">
             I implemented a nonlinear model predictive controller (NMPC) to balance an idealized inverted pendulum.
             The controller respects cart travel and actuator limits while planning control actions to swing the pendulum up and stabilize it in an upright position.  
+            <strong>See GitHub repository for project write-up!</strong>
           </div>
 
-          <p style="text-align: center;"><strong>In-depth project write-up coming soon</strong></p>
+          <div class="project-math">
+            $$
+            \min_{u_{k:k+N-1}} \;\; \sum_{i=0}^{N-1} \ell(x_{k+i}, u_{k+i}) + \ell_f(x_{k+N}), \qquad x_{k+1} = f_d(x_k, u_k)
+            $$           
+            <div class="eq-caption">
+              NMPC objective over horizon (left) and discrete-time system dynamics (right)
+            </div>
+          </div>
 
         </div>
       </div>
@@ -431,7 +443,7 @@
 
           <div class="project-desc">
             I used a webcam and a Universal Robots' UR5 manipulator to allow for the end effector to deliver a cube to a dynamically moving human hand.
-            I used PID controllers to guide the end effector to the human hand, scaling speed as target became closer. 
+            I used PID controllers to guide the end effector to the human hand, scaling speed as the target became closer. 
           </div>
 
           <div class="project-math">
@@ -464,8 +476,9 @@
           </div>
 
           <div class="project-desc">
-            I designed a custom actuator for bipedal and quadrupedal robotics. The actuator used a planetary gearbox to achieve 8:1 reduction and is fully backdriveable. 
-            The design uses <a href="https://mjbots.com/">mjbots</a> motors, drivers, and magnetic encoders for control. 
+            I designed a custom actuator for bipedal and quadrupedal robotics. The actuator uses a planetary gearbox to achieve an 8:1 reduction and is fully backdriveable. 
+            The design uses <a href="https://mjbots.com/">mjbots</a> motors, drivers, and magnetic encoders for control, and I provide a BOM and 3D-printable STL files for fabrication and assembly. 
+            I control the actuator using a Raspberry Pi with an mjbots pi3hat (via the Python scripts in my GitHub repositiory).
           </div>
 
         </div>
