@@ -40,6 +40,18 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Papers I like -->
+    {% if page.some_papers_i_like_right_now %}
+      <h2>some papers I like right now</h2>
+      <ul>
+        {% for paper in page.some_papers_i_like_right_now %}
+          <li>
+            <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
@@ -47,6 +59,7 @@ layout: default
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
+
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}

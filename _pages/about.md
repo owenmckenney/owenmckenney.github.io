@@ -18,6 +18,15 @@ announcements:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
+some_papers_i_like_right_now:
+  - title: "Passive propulsion in vortex wakes"
+    url: https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/passive-propulsion-in-vortex-wakes/A431EC18AAEDA78CC6572FB62A249005
+  - title: "Robotic vertical jumping agility via series-elastic power modulation"
+    url: https://par.nsf.gov/servlets/purl/10025797
+  - title: "Touch the Wind: Simultaneous Airflow, Drag and Interaction Sensing on a Multirotor"
+    url: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9341797
+
+
 latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
@@ -26,6 +35,6 @@ latest_posts:
 
 Hey there! I'm Owen, a fourth-year at the [University of Virginia](https://engineering.virginia.edu/department/mechanical-and-aerospace-engineering) pursuing a B.S. in Mechanical Engineering and a minor in Computer Science. I'm a member of the BIER Lab under [Dr. Hilary Bart-Smith](https://engineering.virginia.edu/faculty/hilary-bart-smith) and also spent time in the WEARLab under [Dr. Sarah Sun](https://engineering.virginia.edu/faculty/ye-sarah-sun).
 
-Broadly speaking, I am interested in how bioinspired methods in robotics can improve traditional sensing, locomotion, and manipulation by offloading computational complexity into the the mechanics of the robot itself. Robots should be designed such that their morphology inherently facilitates more efficient, adaptive, and otherwise intelligent behavior. 
+Broadly speaking, I am interested in how bioinspired methods in robotics can improve traditional sensing, locomotion, and manipulation by offloading computational complexity into the the mechanics of the robot itself. Robots should be designed such that their morphology inherently facilitates more efficient, adaptive, and otherwise intelligent behavior.
 
 Outside of engineering, I spend a lot of my free time hiking and camping in the [Blue Ridge Mountains](https://www.gettyimages.com/search/2/image?servicecontext=srp-related&phrase=blue+ridge+mountains+virginia&tracked_gsrp_landing=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fblue-ridge-mountains-virginia%3Fservicecontext%3Dsrp-related), bouldering (v4 merchant), playing/watching soccer ([up the reds](https://en.wikipedia.org/wiki/Liverpool_F.C.)), and honing my cooking skills.
