@@ -18,8 +18,18 @@ manage_gemfile_lock() {
     fi
 }
 
+ensure_bundle_dependencies() {
+    if bundle check &> /dev/null; then
+        echo "Bundle dependencies already installed"
+    else
+        echo "Installing missing bundle dependencies"
+        bundle install
+    fi
+}
+
 start_jekyll() {
     manage_gemfile_lock
+    ensure_bundle_dependencies
     bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling &
 }
 
