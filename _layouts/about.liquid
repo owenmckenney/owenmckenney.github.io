@@ -43,7 +43,12 @@ layout: default
     <!-- Papers I like -->
     {% if page.some_papers_i_like_right_now %}
       <h2>some papers I like right now</h2>
-      <ul>
+      {% if page.some_papers_i_like_right_now_description %}
+        <p style="margin-bottom: 0.5rem;">
+          {{ page.some_papers_i_like_right_now_description | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
+      <ul style="margin-top: 0;">
         {% for paper in page.some_papers_i_like_right_now %}
           <li>
             <a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
@@ -90,3 +95,5 @@ layout: default
     {% endif %}
   </article>
 </div>
+
+
