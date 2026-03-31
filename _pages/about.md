@@ -23,8 +23,8 @@ some_papers_i_like_right_now_description: I update this section occasionally
 some_papers_i_like_right_now:
   - title: "Passive propulsion in vortex wakes"
     url: https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/passive-propulsion-in-vortex-wakes/A431EC18AAEDA78CC6572FB62A249005
-  - title: "Robotic vertical jumping agility via series-elastic power modulation"
-    url: https://par.nsf.gov/servlets/purl/10025797
+  - title: "Physics-informed neural networks (PINNs) for fluid mechanics: a review"
+    url: https://link.springer.com/article/10.1007/s10409-021-01148-1
   - title: "Touch the Wind: Simultaneous Airflow, Drag and Interaction Sensing on a Multirotor"
     url: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9341797
 
