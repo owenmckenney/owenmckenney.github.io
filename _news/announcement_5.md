@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Grateful to be a recipient of the 2026 [NSF Graduate Research Fellowship Program](https://www.nsfgrfp.org/)!
+I'm grateful to be a recipient of the 2026 [NSF Graduate Research Fellowship](https://www.nsfgrfp.org/)!
