@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Model Predictive Control
-description: Inverted pendulum swing-up using nonlinear model predictive control. See GitHub for project report
+title: Balancing an Inverted Pendulum using Nonlinear Model Predictive Control
+description: 
 img: /assets/img/ip_nmpc.gif
 importance: 1
 

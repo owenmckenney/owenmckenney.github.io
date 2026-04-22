@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Vision-Based UR5 Human-Robot Interaction
-description: Guides cube to human hand using a camera
+title: Dynamic UR5 Object Delivery using Hand Tracking
+description: 
 img: /assets/img/rmfp.gif
 importance: 2
 

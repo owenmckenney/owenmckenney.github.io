@@ -1,7 +1,7 @@
 ---
 layout: page
-title: UR5 Virtual Environment
-description: ROS2/Python/MoveIt software stack using a single camera for EEG-controlled manipulation experiments 
+title: UR5 ROS2/Python/Moveit Single Camera Pick-and-Place
+description:
 img: /assets/img/ur5.gif
 importance: 3
 
