@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3D Printed Planetarydd Actuator for Quadrupedal and Bipedal Robotics
+title: 3D Printed Planetary Actuator for Quadrupedal and Bipedal Robotics
 description:
 img: /assets/img/ra.gif
 importance: 4
