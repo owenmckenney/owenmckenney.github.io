@@ -4,7 +4,7 @@ title: other projects
 permalink: /projects/
 description: Selected projects and reports. [See other assorted technical work here](/assets/pdf/Owen-McKenney-Technical-Portfolio.pdf)
 nav: true
-nav_order: 3
+nav_order: 4
 horizontal: false
 ---
 
