@@ -2,7 +2,8 @@
 layout: page
 title: other projects
 permalink: /projects/
-description: Selected projects and reports. [See other assorted technical work here](/assets/pdf/Owen-McKenney-Technical-Portfolio.pdf)
+description: Selected projects. [See some other assorted technical work here](/assets/pdf/Owen-McKenney-Technical-Portfolio.pdf)
+reports_description: Written to help me better retain information
 nav: true
 nav_order: 4
 horizontal: false
@@ -27,6 +28,11 @@ horizontal: false
 
     {% if report_projects.size > 0 %}
       <h1 class="post-title projects-section-title">reports</h1>
+      {% if page.reports_description %}
+        <p class="post-description projects-section-description">
+          {{ page.reports_description | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
           {% for project in report_projects %}
@@ -46,6 +52,11 @@ horizontal: false
 
     {% if report_projects.size > 0 %}
       <h1 class="post-title projects-section-title">reports</h1>
+      {% if page.reports_description %}
+        <p class="post-description projects-section-description">
+          {{ page.reports_description | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      {% endif %}
       <div class="row row-cols-1 row-cols-md-3">
         {% for project in report_projects %}
           {% include projects.liquid %}
