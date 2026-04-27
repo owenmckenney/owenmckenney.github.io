@@ -38,6 +38,6 @@ Hey there! I'm Owen, a fourth-year at the [University of Virginia](https://engin
 
 Broadly, I want to understand how robots can better perceive and interact with their environment through bio-inspired design, sensing, and control. I'm interested in developing robotic systems that leverage morphology to reduce computational burden and enable rapid, adaptive behaviors. My research is supported by the [NSF Graduate Research Fellowship](https://www.nsfgrfp.org/).
 
-Outside of engineering, I spend a lot of my free time hiking and camping in the [Blue Ridge Mountains](https://www.gettyimages.com/search/2/image?servicecontext=srp-related&phrase=blue+ridge+mountains+virginia&tracked_gsrp_landing=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fblue-ridge-mountains-virginia%3Fservicecontext%3Dsrp-related), going bouldering (v4 merchant), playing and [watching](https://en.wikipedia.org/wiki/Liverpool_F.C.) soccer, and improving my cooking skills.
+Outside of engineering, I spend a lot of my free time hiking and camping in the [Blue Ridge Mountains](https://www.nps.gov/blri/learn/nature/mountains.htm), going bouldering (v4 merchant), playing and [watching](https://en.wikipedia.org/wiki/Liverpool_F.C.) soccer, and improving my cooking skills.
 
 
