@@ -34,7 +34,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hey there! I'm Owen, a fourth-year at the [University of Virginia](https://engineering.virginia.edu/department/mechanical-and-aerospace-engineering) pursuing a B.S. in Mechanical Engineering and a minor in Computer Science. I'm a member of the BIER Lab under [Dr. Hilary Bart-Smith](https://engineering.virginia.edu/faculty/hilary-bart-smith) and also spent time in the WEARLab under [Dr. Sarah Sun](https://engineering.virginia.edu/faculty/ye-sarah-sun). Starting in the Fall of 2026, I will be pursuing my Ph.D. in Mechanical Engineering at [Carnegie Mellon University](https://www.meche.engineering.cmu.edu/) working with [Dr. Sarah Bergbreiter](https://www.meche.engineering.cmu.edu/directory/bios/bergbreiter-sarah.html).
+Hey there! I'm Owen, a Ph.D. student in the Mechanical Engineering Department at [Carnegie Mellon University](https://www.meche.engineering.cmu.edu/) working with [Dr. Sarah Bergbreiter](https://www.meche.engineering.cmu.edu/directory/bios/bergbreiter-sarah.html). I completed my B.S. in Mechanical Engineering at the [University of Virginia](https://engineering.virginia.edu/department/mechanical-and-aerospace-engineering) in May 2026. 
 
 Broadly, I want to understand how robots can better perceive and interact with their environment through bio-inspired design, sensing, and control. I'm interested in developing robotic systems that leverage novel morphology to reduce computational burden and enable rapid, adaptive behaviors. My research is supported by the [NSF Graduate Research Fellowship](https://www.nsfgrfp.org/).
 
