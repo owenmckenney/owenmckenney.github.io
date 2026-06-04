@@ -6,9 +6,7 @@
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
+              {{- site.first_name -}}
             {% endif %}
             {% if site.middle_name %}
               {{- site.middle_name -}}
@@ -141,12 +139,4 @@
       </div>
     </div>
   </nav>
-  {% if site.enable_progressbar %}
-    <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
-      <div class="progress-container">
-        <span class="progress-bar"></span>
-      </div>
-    </progress>
-  {% endif %}
 </header>
